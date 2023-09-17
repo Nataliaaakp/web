@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;, courier;
+    background-color: #B2B2A2;
+    text-align: center;
+}
+
+/* Gaya untuk header */
+header {
+    background-color: #B2B2A2; /* Warna latar belakang header */
+    padding: 20px; /* Ruang dalam header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bayangan di bawah header */
+}
+
+header h1 {
+    color: #6D7973; /* Warna teks header */
+    font-size: 15px; /* Ukuran teks header */
+    font-family:monospace;, courier ;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #3F3931; /* Latar belakang galeri */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item {
+    width: 300px; /* Lebar konsisten */
+    margin: 10px;
+    text-align: center;
+    background-color: #B2B2A2; /* Latar belakang item galeri */
+    border-radius: 10px; /* Sudut item galeri */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Hindari overflow gambar dan video */
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Gaya tambahan untuk elemen video dalam galeri */
+.gallery-item video {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Gaya tambahan untuk caption video */
+.gallery-item .caption {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Gaya tambahan untuk modal video */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.modal video {
+    max-width: 80%;
+    max-height: 80%;
+    border: none; /* Hapus border di video modal */
+    border-radius: 10px;
+    background-color: #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.caption {
+    margin: 10px;
+    font-size: 16px;
+    color: #333;
+}
